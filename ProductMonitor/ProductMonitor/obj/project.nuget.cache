@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mL8HTt7xVTlLTKXDR5O0Og6aCJ04NxXpGoPpx9FXqSPNuHq/X0sVpgJj3kSlZXwMNfuXbjdbPYEkUrd9A5GjLA==",
+  "dgSpecHash": "hLbuu0uswR1gmtxxcw6sqDeLalRS7+DyF13x4w+S4Kj2oDrkpGAlsCpKVGjrwqsz0K2G6zzKZCIyFy/JQz2/8Q==",
   "success": true,
-  "projectFilePath": "E:\\自行课程资源\\生产监控平台\\ProductMonitor\\ProductMonitor\\ProductMonitor.csproj",
+  "projectFilePath": "E:\\自行课程资源\\WPF深入\\ProductMonitor_P3\\ProductMonitor\\ProductMonitor.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

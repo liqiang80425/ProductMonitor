@@ -8,12 +8,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resource\Fonts\digital_display.ttf" />
+    <None Remove="Resource\Fonts\iconfont.ttf" />
+    <None Remove="Resource\Images\device.png" />
+    <None Remove="Resource\Images\Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Views\" />
     <Folder Include="ViewModels\" />
-    <Folder Include="Resource\" />
     <Folder Include="UserControl\" />
-    <Folder Include="Dictionary\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resource\Fonts\digital_display.ttf" />
+    <Resource Include="Resource\Fonts\iconfont.ttf" />
+    <Resource Include="Resource\Images\device.png" />
+    <Resource Include="Resource\Images\Logo.png" />
   </ItemGroup>
 
 </Project>

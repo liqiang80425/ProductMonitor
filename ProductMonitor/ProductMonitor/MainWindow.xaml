@@ -5,14 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProductMonitor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        Title="生产监控平台" Height="750" Width="1200">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0"></WindowChrome>
+    </WindowChrome.WindowChrome>
     <Grid>
+        <Grid.Background>
+            <!--背景颜色渐变 画刷-->
+            <RadialGradientBrush>
+                <!--RadialGradientBrush 由里向外-->
+                <!--LinearGradientBrush 由左上角向右下角-->
+                <GradientStop Color="#ff285173" Offset="0"></GradientStop>
+                <GradientStop Color="#ff244967" Offset="0.5"></GradientStop>
+                <GradientStop Color="#ff14273a" Offset="1"></GradientStop>
+            </RadialGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
         </Grid.RowDefinitions>
         <!--第一行 头部-->
+        <Border BorderThickness="0,0,0,1" BorderBrush="#5518aabd">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <!--第一列-->
+                <Image Source="/Resource/Images/Logo.png" Margin="10,7" />
+                <!--第二列-->
+                <StackPanel Orientation="Vertical" Grid.Column="1" VerticalAlignment="Center">
+                    <TextBlock Text="生产监控平台" Foreground="White" FontSize="16"></TextBlock>
+                    <TextBlock Text="阻碍你前行的，其实就是你自己！" Foreground="White" FontSize="12" Margin="0,2,0,0"></TextBlock>
+                </StackPanel>
+                <!--第三列-->
+                <Grid Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Background="Transparent" >
+                        <Button Content="&#xe624;" Style="{StaticResource OperateBtnStyle}"></Button>
+                        <Button Content="&#xe600;" Style="{StaticResource OperateBtnStyle}"></Button>
+                        <Button Content="&#xe609;" Style="{StaticResource OperateBtnStyle}" Background="DarkRed"></Button>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Border>
         <!--第二行 内容-->
         <!--第二行 底部-->
     </Grid>

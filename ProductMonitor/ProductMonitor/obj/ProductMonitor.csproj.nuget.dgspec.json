@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\自行课程资源\\生产监控平台\\ProductMonitor\\ProductMonitor\\ProductMonitor.csproj": {}
+    "E:\\自行课程资源\\WPF深入\\ProductMonitor_P3\\ProductMonitor\\ProductMonitor.csproj": {}
   },
   "projects": {
-    "E:\\自行课程资源\\生产监控平台\\ProductMonitor\\ProductMonitor\\ProductMonitor.csproj": {
+    "E:\\自行课程资源\\WPF深入\\ProductMonitor_P3\\ProductMonitor\\ProductMonitor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\自行课程资源\\生产监控平台\\ProductMonitor\\ProductMonitor\\ProductMonitor.csproj",
+        "projectUniqueName": "E:\\自行课程资源\\WPF深入\\ProductMonitor_P3\\ProductMonitor\\ProductMonitor.csproj",
         "projectName": "ProductMonitor",
-        "projectPath": "E:\\自行课程资源\\生产监控平台\\ProductMonitor\\ProductMonitor\\ProductMonitor.csproj",
+        "projectPath": "E:\\自行课程资源\\WPF深入\\ProductMonitor_P3\\ProductMonitor\\ProductMonitor.csproj",
         "packagesPath": "C:\\Users\\LiQiang\\.nuget\\packages\\",
-        "outputPath": "E:\\自行课程资源\\生产监控平台\\ProductMonitor\\ProductMonitor\\obj\\",
+        "outputPath": "E:\\自行课程资源\\WPF深入\\ProductMonitor_P3\\ProductMonitor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

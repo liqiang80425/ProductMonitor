@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\自行课程资源\生产监控平台\ProductMonitor\ProductMonitor\obj\Debug\net6.0-windows\
+E:\自行课程资源\WPF深入\ProductMonitor_P3\ProductMonitor\obj\Debug\net6.0-windows\
 ProductMonitor
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-E:\自行课程资源\生产监控平台\ProductMonitor\ProductMonitor\App.xaml
-11407045341
+E:\自行课程资源\WPF深入\ProductMonitor_P3\ProductMonitor\App.xaml
+21950693003
 
 51956492781
 194-1103864946
-MainWindow.xaml;
+Dictionary\OperateBtnStyleDic.xaml;MainWindow.xaml;
 
 False
 
