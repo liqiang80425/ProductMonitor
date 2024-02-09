@@ -45,17 +45,27 @@
                 <Grid Grid.Column="2">
                     <Grid.RowDefinitions>
                         <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
+                        <RowDefinition Height="15"></RowDefinition>
                     </Grid.RowDefinitions>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Background="Transparent" >
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Background="Transparent" WindowChrome.IsHitTestVisibleInChrome="True" >
                         <Button Content="&#xe624;" Style="{StaticResource OperateBtnStyle}"></Button>
                         <Button Content="&#xe600;" Style="{StaticResource OperateBtnStyle}"></Button>
                         <Button Content="&#xe609;" Style="{StaticResource OperateBtnStyle}" Background="DarkRed"></Button>
                     </StackPanel>
+                    <!--第二行-->
+                    <Border Grid.Row="1" BorderThickness="0,1,0,0" BorderBrush="#5518aabd">
+                        <Border.Background>
+                            <VisualBrush TileMode="FlipXY" Viewport="0,0,7,7" ViewportUnits="Absolute">
+                                <VisualBrush.Visual>
+                                    <Line X1="0" Y1="10" X2="10" Y2="0" Stroke="Gray" StrokeThickness="1"></Line>
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Border.Background> 
+                    </Border>
                 </Grid>
             </Grid>
         </Border>
         <!--第二行 内容-->
-        <!--第二行 底部-->
+        <!--第三行 底部-->
     </Grid>
 </Window>
