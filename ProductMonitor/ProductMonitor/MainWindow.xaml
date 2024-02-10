@@ -23,7 +23,7 @@
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="675"></RowDefinition>
             <RowDefinition Height="25"></RowDefinition>
         </Grid.RowDefinitions>
         <!--第一行 头部-->
@@ -67,5 +67,28 @@
         </Border>
         <!--第二行 内容-->
         <!--第三行 底部-->
+        <Border Grid.Row="2" BorderThickness="0,1,0,0" BorderBrush="#5518aabd">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                   <!--第一列-->
+                <Border BorderThickness="0,1,0,0" BorderBrush="#5518aabd">
+                    <Border.Background>
+                        <VisualBrush TileMode="FlipXY" Viewport="0,0,7,7" ViewportUnits="Absolute">
+                            <VisualBrush.Visual>
+                                <Line X1="0" Y1="10" X2="10" Y2="0" Stroke="Gray" StrokeThickness="1"></Line>
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Border.Background>
+                </Border>
+
+                <!--第二列-->
+                <TextBlock Grid.Column="1" Text="XX教育集团 版权所有" Foreground="White" FontSize="15" FontWeight="Bold"></TextBlock>
+            </Grid>
+            
+            
+        </Border>
     </Grid>
 </Window>
