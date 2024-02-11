@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProductMonitor.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace ProductMonitor
         public MainWindow()
         {
             InitializeComponent();
+            MainWindowVM mainWindowVM = new MainWindowVM();
+            this.DataContext = mainWindowVM;
         }
     }
 }

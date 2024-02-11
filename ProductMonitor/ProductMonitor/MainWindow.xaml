@@ -23,7 +23,7 @@
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="675"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="25"></RowDefinition>
         </Grid.RowDefinitions>
         <!--第一行 头部-->
@@ -65,7 +65,9 @@
                 </Grid>
             </Grid>
         </Border>
-        <!--第二行 内容-->
+        <!--第二行 内容 用户控件并嵌入都主界面-->
+        <ContentControl Grid.Row="1" Content="{Binding MonitorUC}"></ContentControl>
+        
         <!--第三行 底部-->
         <Border Grid.Row="2" BorderThickness="0,1,0,0" BorderBrush="#5518aabd">
             <Grid>
