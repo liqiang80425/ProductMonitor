@@ -7,6 +7,24 @@
              mc:Ignorable="d" 
              Height="675" Width="1200">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--第一行-->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="{Binding TimeStr}" Foreground="White" FontSize="30" VerticalAlignment="Center" FontFamily="../Resource/Fonts/#Digital Display"></TextBlock>
+                <StackPanel Margin="15,0,0,0">
+                    <TextBlock Text="{Binding DateStr}" Foreground="White" FontSize="10"></TextBlock>
+                    <TextBlock Text="{Binding WeekStr}" Foreground="White" FontSize="10" HorizontalAlignment="Right"></TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
     </Grid>
 </UserControl>
