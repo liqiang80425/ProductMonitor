@@ -73,9 +73,72 @@ namespace ProductMonitor.ViewModels
             {
                 int index = (int)DateTime.Now.DayOfWeek;
 
-                string[] week = new string[7] { "星期日", "星期一" , "星期二" , "星期三" ,"星期四" ,"星期五" ,"星期六" };
-                
+                string[] week = new string[7] { "星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六" };
+
                 return week[index];
+            }
+        }
+
+        /// <summary>
+        /// 机台总数
+        /// </summary>
+        private string _MachineCount="02981";
+
+        /// <summary>
+        /// 机台总数
+        /// </summary>
+        public string MachineCount
+        {
+            get { return _MachineCount; }
+            set
+            {
+                _MachineCount = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("MachineCount"));
+                }
+            }
+        }
+
+        /// <summary>
+        /// 生产计数
+        /// </summary>
+        private string _ProductCount = "16403";
+
+        /// <summary>
+        /// 生产计数
+        /// </summary>
+        public string ProductCount
+        {
+            get { return _ProductCount; }
+            set
+            {
+                _ProductCount = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("ProductCount"));
+                }
+            }
+        }
+
+        /// <summary>
+        /// 不良计数
+        /// </summary>
+        private string _BadCount = "0403";
+
+        /// <summary>
+        /// 不良计数
+        /// </summary>
+        public string BadCount
+        {
+            get { return _BadCount; }
+            set
+            {
+                _BadCount = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("BadCount"));
+                }
             }
         }
     }

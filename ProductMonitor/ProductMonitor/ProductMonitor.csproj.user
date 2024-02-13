@@ -12,6 +12,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Dictionary\BtnStyleDic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Dictionary\OperateBtnStyleDic.xaml">
       <SubType>Designer</SubType>
     </Page>
