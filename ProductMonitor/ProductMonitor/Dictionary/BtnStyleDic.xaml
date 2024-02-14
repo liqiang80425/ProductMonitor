@@ -15,7 +15,7 @@
                             </LinearGradientBrush>
                         </Border.BorderBrush>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <TextBlock Text="{TemplateBinding Tag}" FontFamily="../Resource/Fonts/#iconfont" Margin="10,0"></TextBlock>
+                            <TextBlock Text="{TemplateBinding Tag}" FontFamily="../Resource/Fonts/#iconfont" Margin="0,2,5,0"></TextBlock>
                             <TextBlock Text="{TemplateBinding Content}" VerticalAlignment="Center"></TextBlock>
                         </StackPanel>
                     </Border>

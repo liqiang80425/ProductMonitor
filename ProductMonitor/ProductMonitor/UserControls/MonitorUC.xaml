@@ -6,6 +6,55 @@
              xmlns:local="clr-namespace:ProductMonitor.UserControls"
              mc:Ignorable="d" 
              Height="675" Width="1200">
+    <UserControl.Resources>
+        <Style TargetType="GroupBox">
+            <Setter Property="Margin" Value="10,3"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="GroupBox">
+                        <Grid>
+                            <!--左上角的线条-->
+                            <Polyline Points="0 30,0 10,10 0,30 0" Stroke="#9918aabd" StrokeThickness="1" VerticalAlignment="Top" HorizontalAlignment="Left"></Polyline>
+                            <!--左上 横的点  小圆-->
+                            <Ellipse Width="4" Height="4" HorizontalAlignment="Left" Fill="#9918aabd" VerticalAlignment="Top" Margin="24,-2,0,0"></Ellipse>
+                            <!--左侧的点  小圆-->
+                            <Ellipse Width="4" Height="4" HorizontalAlignment="Left" Fill="#9918aabd" VerticalAlignment="Top" Margin="-2,24,0,0"></Ellipse>
+
+                            <!--Moveto-->
+                            <Path Data="M0 0,3 3,30 3,33 0,68 0,73 7,78 7,78,10M8 0,25 0" Stroke="#9918aabd" VerticalAlignment="Top" HorizontalAlignment="Right"></Path>
+
+                            <!--左下角的线条-->
+                            <Polyline Points="0 0,0 15,10 15" Stroke="#9918aabd" StrokeThickness="1" VerticalAlignment="Bottom"  HorizontalAlignment="Left"></Polyline>
+                            
+                            <!--右下角的线-->
+                            <Polyline Points="10 0,0,10" Stroke="#9918aabd" StrokeThickness="1" HorizontalAlignment="Right" VerticalAlignment="Bottom"></Polyline>
+                            
+                            <!--右下角的三角形-->
+                            <Polygon Points="0 7,7 7,7 0" Fill="#9918aabd" HorizontalAlignment="Right" VerticalAlignment="Bottom"></Polygon>
+                            
+                            <!--上面的线-->
+                            <Border BorderThickness="0,1,0,0" BorderBrush="#9918aabd" VerticalAlignment="top" Margin="30,-0.5,78,0"></Border>
+                            <!--右边的线-->
+                            <Border BorderThickness="0,0,1,0" BorderBrush="#9918aabd"  HorizontalAlignment="Right" Margin="0,10"></Border>
+
+                            <!--下面的线-->
+                            <Border BorderThickness="0,0,0,1" BorderBrush="#9918aabd" VerticalAlignment="Bottom" Margin="10,0"></Border>
+
+                            <!--左边的线-->
+                            <Border BorderThickness="1,0,0,0" BorderBrush="#9918aabd"  HorizontalAlignment="Left" Margin="-0.5,15"></Border>
+                            
+                            <!--文字前的装饰-->
+                            <Path Data="M0 0,3 0,5 4,3 8,0 8,3 4"   Fill="#9918aabd" Margin="10,13"></Path>
+                            <Path Data="M0 0,3 0,5 4,3 8,0 8,3 4"   Fill="#5518aabd" Margin="16,13"></Path>
+                            <TextBlock Text="{TemplateBinding Header}" Foreground="White" FontWeight="Bold" Margin="25,8" HorizontalAlignment="Left" VerticalAlignment="Top"></TextBlock>
+                            <!--显示内容-->
+                            <ContentPresenter></ContentPresenter>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
@@ -62,11 +111,23 @@
                     </ItemsControl.ItemsPanel>
                 </ItemsControl>
             </StackPanel>
-            
+
             <!--配置按钮 触发器 渐进色-->
             <Button Style="{StaticResource BtnStyle}" HorizontalAlignment="Right" Grid.Column="1" Height="35" Width="80" VerticalAlignment="Center" Margin="20,0"  Content="配置" Tag="&#xe625;"></Button>
+        </Grid>
 
-            <!--Grid.Column="1" Height="33" Width="80" VerticalAlignment="Center"  HorizontalAlignment="Right" Margin="20,0" Content="配置" Tag="&#xe625;" Style="{StaticResource ButtonStyle}"-->
+        <!--第二行-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <UniformGrid Grid.Column="0" Columns="1">
+                <GroupBox Header="环境"></GroupBox>
+                <GroupBox Header="产能"></GroupBox>
+                <GroupBox Header="质量"></GroupBox>
+            </UniformGrid>
         </Grid>
     </Grid>
 </UserControl>
