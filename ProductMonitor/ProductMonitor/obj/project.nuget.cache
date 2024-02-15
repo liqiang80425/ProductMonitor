@@ -1,8 +1,32 @@
 {
   "version": 2,
-  "dgSpecHash": "xy5ZBzCBtJ4x0tAWZuU6bQWT7DoMyefcgUfgwC100WgoTtDv1p4VC7t/sbPLMIjRzYYedESsor1xyp0qBypBUQ==",
+  "dgSpecHash": "if2DOyHMkzQXNIJLOWKQ9r/kxiTx1VC/2x9+O/Dgf4LE2Ge6IHT7J3bc6Q4CuF+zMCo7/nYH9Y2fD2ZhJstZwg==",
   "success": true,
-  "projectFilePath": "E:\\自行课程资源\\WPF深入\\ProductMonitor\\ProductMonitor\\ProductMonitor.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "projectFilePath": "E:\\自行课程资源\\WPF深入\\ProductMonitor_P12\\ProductMonitor\\ProductMonitor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LiQiang\\.nuget\\packages\\livecharts\\0.9.7\\livecharts.0.9.7.nupkg.sha512",
+    "C:\\Users\\LiQiang\\.nuget\\packages\\livecharts.wpf\\0.9.7\\livecharts.wpf.0.9.7.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1”而不是项目目标框架“net6.0-windows7.0”还原包“LiveCharts 0.9.7”。此包可能与项目不完全兼容。",
+      "libraryId": "LiveCharts",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "已使用“.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1”而不是项目目标框架“net6.0-windows7.0”还原包“LiveCharts.Wpf 0.9.7”。此包可能与项目不完全兼容。",
+      "libraryId": "LiveCharts.Wpf",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }

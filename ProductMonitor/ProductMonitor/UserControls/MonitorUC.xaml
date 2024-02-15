@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProductMonitor.UserControls"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d" 
              Height="675" Width="1200">
     <UserControl.Resources>
@@ -124,9 +125,112 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <UniformGrid Grid.Column="0" Columns="1">
-                <GroupBox Header="环境"></GroupBox>
-                <GroupBox Header="产能"></GroupBox>
-                <GroupBox Header="质量"></GroupBox>
+                <GroupBox Header="环境">
+                    <ItemsControl ItemsSource="{Binding EnviromentList}" VerticalAlignment="Center">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Columns="4"></UniformGrid>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5">
+                                    <TextBlock Text="{Binding EnItemValue}" FontSize="16" Foreground="#ff2bedf1" Margin="0,5"></TextBlock>
+                                    <TextBlock Text="{Binding EnItemName}" FontSize="10" Foreground="#aaffffff" Margin="0,5"></TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </GroupBox>
+                <GroupBox Header="产能">
+                    <Grid>
+                        <!--定义X数据-->
+                        <lvc:CartesianChart Margin="20,35,20,5">
+                            <lvc:CartesianChart.AxisX>
+                                <lvc:Axis Labels="8:00,9:00,10:00,11:00,12:00,13:00,14:00,15:00,16:00">
+                                    <lvc:Axis.Separator>
+                                        <lvc:Separator Step="1" StrokeThickness="0"></lvc:Separator>
+                                    </lvc:Axis.Separator>
+                                </lvc:Axis>
+                            </lvc:CartesianChart.AxisX>
+                            
+                            <!--定义Y的数据-->
+                            <lvc:CartesianChart.Series>
+                                <lvc:ColumnSeries Values="300,400,480,450,380,450,450,330,340" Title="生产计数"  MaxColumnWidth="10">
+                                    <!--渐变色-->
+                                    <lvc:ColumnSeries.Fill>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                            <GradientStop Color="#ff3fbbe6" Offset="0"></GradientStop>
+                                            <GradientStop Color="#ff2bedf1" Offset="1"></GradientStop>
+                                        </LinearGradientBrush>
+                                    </lvc:ColumnSeries.Fill>
+                                </lvc:ColumnSeries>
+
+                                <lvc:ColumnSeries Values="15,55,15,40,38,45,56,42,24" Title="不良计数"  MaxColumnWidth="10">
+                                    <!--渐变色-->
+                                    <lvc:ColumnSeries.Fill>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                            <GradientStop Color="#fffb9a9a" Offset="0"></GradientStop>
+                                            <GradientStop Color="#ffff5151" Offset="1"></GradientStop>
+                                        </LinearGradientBrush>
+                                    </lvc:ColumnSeries.Fill>
+                                </lvc:ColumnSeries>
+                            </lvc:CartesianChart.Series>
+                            
+                            <!--Y数据刻度-->
+                            <lvc:CartesianChart.AxisY>
+                                <lvc:Axis MinValue="0" MaxValue="500" >
+                                    <lvc:Axis.Separator>
+                                        <lvc:Separator Step="100" Stroke="#11ffffff"></lvc:Separator>
+                                    </lvc:Axis.Separator>
+                                </lvc:Axis>
+                            </lvc:CartesianChart.AxisY>
+                        </lvc:CartesianChart>
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10">
+                            <Border Height="6" Width="6" Background="#ff2bedf1"  Margin="5,0"></Border>
+                            <TextBlock Text="生产计数" FontSize="10" Foreground="#44ffffff"></TextBlock>
+
+                            <Border Height="6" Width="6" Background="#ffff5151"  Margin="5,0"></Border>
+                            <TextBlock Text="不良计数" FontSize="10" Foreground="#44ffffff"></TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="质量">
+                    <Grid>
+                        <lvc:CartesianChart Margin="20,35,20,5">
+                            <lvc:CartesianChart.AxisX>
+                                <lvc:Axis Labels="1#,2#,3#,4#,5#,6#">
+                                    <lvc:Axis.Separator>
+                                        <lvc:Separator Step="1" StrokeThickness="0"></lvc:Separator>
+                                    </lvc:Axis.Separator>
+                                </lvc:Axis>
+                            </lvc:CartesianChart.AxisX>
+
+                            <!--定义Y的数据-->
+                            <lvc:CartesianChart.Series>
+                                <lvc:LineSeries Values="8,2,7,6,4,14" PointGeometrySize="0" Stroke="#ff2bedf1" >
+                                    <!--渐变色-->
+                                    <lvc:LineSeries.Fill>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                            <GradientStop Color="#552bedf1" Offset="0"></GradientStop>
+                                            <GradientStop Color="Transparent" Offset="1"></GradientStop>
+                                        </LinearGradientBrush>
+                                    </lvc:LineSeries.Fill>
+                                </lvc:LineSeries>
+                            </lvc:CartesianChart.Series>
+
+                            <!--Y数据刻度-->
+                            <lvc:CartesianChart.AxisY>
+                                <lvc:Axis MinValue="0" MaxValue="15" >
+                                    <lvc:Axis.Separator>
+                                        <lvc:Separator Step="5" Stroke="#11ffffff"></lvc:Separator>
+                                    </lvc:Axis.Separator>
+                                </lvc:Axis>
+                            </lvc:CartesianChart.AxisY>
+                        </lvc:CartesianChart>
+                    </Grid>
+                </GroupBox>
             </UniformGrid>
         </Grid>
     </Grid>

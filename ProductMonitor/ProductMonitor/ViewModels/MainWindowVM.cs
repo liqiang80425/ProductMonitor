@@ -1,4 +1,5 @@
-﻿using ProductMonitor.UserControls;
+﻿using ProductMonitor.Models;
+using ProductMonitor.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,24 @@ namespace ProductMonitor.ViewModels
     internal class MainWindowVM : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
+
+        /// <summary>
+        /// 视图模型构造函数
+        /// </summary>
+        public MainWindowVM()
+        {
+            #region 初始化环境监控数据
+            EnviromentList = new List<EnviromentModel>();
+
+            EnviromentList.Add(new EnviromentModel {  EnItemName="光照(Lux)", EnItemValue=123});
+            EnviromentList.Add(new EnviromentModel { EnItemName = "噪音(db)", EnItemValue = 55 });
+            EnviromentList.Add(new EnviromentModel { EnItemName = "温度(℃)", EnItemValue = 80 });
+            EnviromentList.Add(new EnviromentModel { EnItemName = "湿度(%)", EnItemValue = 43 });
+            EnviromentList.Add(new EnviromentModel { EnItemName = "PM2.5(m³)", EnItemValue = 20 });
+            EnviromentList.Add(new EnviromentModel { EnItemName = "硫化氢(PPM)", EnItemValue = 15 });
+            EnviromentList.Add(new EnviromentModel { EnItemName = "氮气(PPM)", EnItemValue = 18 });
+            #endregion
+        }
 
         /// <summary>
         /// 监控用户控件
@@ -42,6 +61,7 @@ namespace ProductMonitor.ViewModels
             }
         }
 
+        #region 时间 日期 
         /// <summary>
         /// 时间 小时:分钟
         /// </summary>
@@ -78,11 +98,13 @@ namespace ProductMonitor.ViewModels
                 return week[index];
             }
         }
+        #endregion
 
+        #region 计数
         /// <summary>
         /// 机台总数
         /// </summary>
-        private string _MachineCount="02981";
+        private string _MachineCount = "02981";
 
         /// <summary>
         /// 机台总数
@@ -141,5 +163,30 @@ namespace ProductMonitor.ViewModels
                 }
             }
         }
+        #endregion
+
+        #region 环境监控数据
+        /// <summary>
+        /// 环境监控数据
+        /// </summary>
+        private List<EnviromentModel> _EnviromentList;
+
+        /// <summary>
+        /// 环境监控数据
+        /// </summary>
+        public List<EnviromentModel> EnviromentList
+        {
+            get { return _EnviromentList; }
+            set
+            {
+                _EnviromentList = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("EnviromentList"));
+                }
+            }
+        }
+
+        #endregion
     }
 }
