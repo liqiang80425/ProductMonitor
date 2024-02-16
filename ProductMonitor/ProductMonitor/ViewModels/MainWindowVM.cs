@@ -2,6 +2,7 @@
 using ProductMonitor.UserControls;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
@@ -23,13 +24,44 @@ namespace ProductMonitor.ViewModels
             #region 初始化环境监控数据
             EnviromentList = new List<EnviromentModel>();
 
-            EnviromentList.Add(new EnviromentModel {  EnItemName="光照(Lux)", EnItemValue=123});
+            EnviromentList.Add(new EnviromentModel { EnItemName = "光照(Lux)", EnItemValue = 123 });
             EnviromentList.Add(new EnviromentModel { EnItemName = "噪音(db)", EnItemValue = 55 });
             EnviromentList.Add(new EnviromentModel { EnItemName = "温度(℃)", EnItemValue = 80 });
             EnviromentList.Add(new EnviromentModel { EnItemName = "湿度(%)", EnItemValue = 43 });
             EnviromentList.Add(new EnviromentModel { EnItemName = "PM2.5(m³)", EnItemValue = 20 });
             EnviromentList.Add(new EnviromentModel { EnItemName = "硫化氢(PPM)", EnItemValue = 15 });
             EnviromentList.Add(new EnviromentModel { EnItemName = "氮气(PPM)", EnItemValue = 18 });
+            #endregion
+
+            #region 初始化报警列表
+
+            AlarmList = new List<AlarmModel>();
+            AlarmList.Add(new AlarmModel { Num = "01", Msg = "设备温度过高", Time = "2023-11-23 18:34:56", Duration = 7 });
+            AlarmList.Add(new AlarmModel { Num = "02", Msg = "车间温度过高", Time = "2023-12-08 20:40:59", Duration = 10 });
+            AlarmList.Add(new AlarmModel { Num = "03", Msg = "设备转速过快", Time = "2024-01-05 12:24:34", Duration = 12 });
+            AlarmList.Add(new AlarmModel { Num = "04", Msg = "设备气压偏低", Time = "2024-02-04 19:58:00", Duration = 90 });
+            #endregion
+
+            #region 初始化设备监控
+            DeviceList = new List<DeviceModel>();
+            DeviceList.Add(new DeviceModel { DeviceItem = "电能(Kw.h)", Value = 60.8 });
+            DeviceList.Add(new DeviceModel { DeviceItem = "电压(V)", Value = 390 });
+            DeviceList.Add(new DeviceModel { DeviceItem = "电流(A)", Value = 5 });
+            DeviceList.Add(new DeviceModel { DeviceItem = "压差(kpa)", Value = 13 });
+            DeviceList.Add(new DeviceModel { DeviceItem = "温度(℃)", Value = 36 });
+            DeviceList.Add(new DeviceModel { DeviceItem = "振动(mm/s)", Value = 4.1 });
+            DeviceList.Add(new DeviceModel { DeviceItem = "转速(r/min)", Value = 2600 });
+            DeviceList.Add(new DeviceModel { DeviceItem = "气压(kpa)", Value = 0.5 });
+            #endregion
+
+            #region 初始化雷达数据 
+            RaderList = new List<RaderModel>();
+            RaderList.Add(new RaderModel { ItemName = "排烟风机", Value = 90 });
+            RaderList.Add(new RaderModel { ItemName = "客梯", Value = 30.00 });
+            RaderList.Add(new RaderModel { ItemName = "供水机", Value = 34.89 });
+            RaderList.Add(new RaderModel { ItemName = "喷淋水泵", Value = 69.59 });
+            RaderList.Add(new RaderModel { ItemName = "稳压设备", Value = 20 });
+           
             #endregion
         }
 
@@ -185,6 +217,68 @@ namespace ProductMonitor.ViewModels
                     PropertyChanged(this, new PropertyChangedEventArgs("EnviromentList"));
                 }
             }
+        }
+
+        #endregion
+
+        #region 报警属性
+
+        /// <summary>
+        /// 报警集合
+        /// </summary>
+        private List<AlarmModel> _AlarmList;
+
+        /// <summary>
+        /// 报警集合
+        /// </summary>
+        public List<AlarmModel> AlarmList
+        {
+            get { return _AlarmList; }
+            set
+            {
+                _AlarmList = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("AlarmList"));
+                }
+            }
+        }
+        #endregion
+
+        /// <summary>
+        /// 设备集合
+        /// </summary>
+        private List<DeviceModel> _DeviceList;
+
+        /// <summary>
+        /// 设备集合
+        /// </summary>
+        public List<DeviceModel> DeviceList
+        {
+            get { return _DeviceList; }
+            set
+            {
+                _DeviceList = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("DeviceList"));
+                }
+            }
+        }
+
+        #region 雷达数据属性
+        /// <summary>
+        /// 雷达
+        /// </summary>
+        private List<RaderModel> _RaderList;
+
+        /// <summary>
+        /// 雷达
+        /// </summary>
+        public List<RaderModel> RaderList
+        {
+            get { return _RaderList; }
+            set { _RaderList = value; }
         }
 
         #endregion

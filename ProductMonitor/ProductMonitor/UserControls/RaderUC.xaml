@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="ProductMonitor.UserControls.RaderUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProductMonitor.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid x:Name="LayGrid">
+            <!--画布-->
+        <Canvas x:Name="mainCanvas"></Canvas>
+        
+        <!--4规则多边形-->
+        <Polygon x:Name="P1" Stroke="#22ffffff" StrokeThickness="1"></Polygon>
+        <Polygon x:Name="P2" Stroke="#22ffffff" StrokeThickness="1"></Polygon>
+        <Polygon x:Name="P3" Stroke="#22ffffff" StrokeThickness="1"></Polygon>
+        <Polygon x:Name="P4" Stroke="#22ffffff" StrokeThickness="1"></Polygon>
+        
+        <!--数据多边形-->
+        <Polygon x:Name="P5" Stroke="Orange" Fill="#550091F0" StrokeThickness="1" ></Polygon>
+    </Grid>
+</UserControl>
