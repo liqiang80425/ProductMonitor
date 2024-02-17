@@ -61,7 +61,26 @@ namespace ProductMonitor.ViewModels
             RaderList.Add(new RaderModel { ItemName = "供水机", Value = 34.89 });
             RaderList.Add(new RaderModel { ItemName = "喷淋水泵", Value = 69.59 });
             RaderList.Add(new RaderModel { ItemName = "稳压设备", Value = 20 });
-           
+
+            #endregion
+
+            #region 初始化人员缺岗信息
+            StuffOutWorkList = new List<StuffOutWorkModel>();
+            StuffOutWorkList.Add(new StuffOutWorkModel { StuffName = "张晓婷", Position = "技术员", OutWorkCount = 123 });
+            StuffOutWorkList.Add(new StuffOutWorkModel { StuffName = "李晓", Position = "操作员", OutWorkCount = 23 });
+            StuffOutWorkList.Add(new StuffOutWorkModel { StuffName = "王克俭", Position = "技术员", OutWorkCount = 134 });
+            StuffOutWorkList.Add(new StuffOutWorkModel { StuffName = "陈家栋", Position = "统计员", OutWorkCount = 143 });
+            StuffOutWorkList.Add(new StuffOutWorkModel { StuffName = "杨过", Position = "技术员", OutWorkCount = 12 });
+
+            #endregion
+
+            #region 初始化车间列表 
+            WorkShopList = new List<WorkShopModel>();
+            WorkShopList.Add(new WorkShopModel { WorkShopName = "贴片车间", WorkingCount = 32, WaitCount = 8, WrongCount = 4, StopCount = 0 });
+            WorkShopList.Add(new WorkShopModel { WorkShopName = "封装车间", WorkingCount = 20, WaitCount = 8, WrongCount = 4, StopCount = 0 });
+            WorkShopList.Add(new WorkShopModel { WorkShopName = "焊接车间", WorkingCount = 68, WaitCount = 8, WrongCount = 4, StopCount = 0 });
+            WorkShopList.Add(new WorkShopModel { WorkShopName = "贴片车间", WorkingCount = 68, WaitCount = 8, WrongCount = 4, StopCount = 0 });
+
             #endregion
         }
 
@@ -245,6 +264,7 @@ namespace ProductMonitor.ViewModels
         }
         #endregion
 
+        #region 设备集合属性
         /// <summary>
         /// 设备集合
         /// </summary>
@@ -265,6 +285,8 @@ namespace ProductMonitor.ViewModels
                 }
             }
         }
+        #endregion
+
 
         #region 雷达数据属性
         /// <summary>
@@ -278,9 +300,58 @@ namespace ProductMonitor.ViewModels
         public List<RaderModel> RaderList
         {
             get { return _RaderList; }
-            set { _RaderList = value; }
+            set
+            {
+                _RaderList = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("RaderList"));
+                }
+            }
         }
 
         #endregion
+
+        #region 缺岗员工属性
+
+        /// <summary>
+        /// 缺岗员工
+        /// </summary>
+        private List<StuffOutWorkModel> _StuffOutWorkList;
+
+        /// <summary>
+        /// 缺岗员工
+        /// </summary>
+        public List<StuffOutWorkModel> StuffOutWorkList
+        {
+            get { return _StuffOutWorkList; }
+            set
+            {
+                _StuffOutWorkList = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("StuffOutWorkList"));
+                }
+            }
+        }
+        #endregion
+
+        #region 车间属性
+        /// <summary>
+        /// 车间
+        /// </summary>
+        private List<WorkShopModel> _WorkShopList;
+
+        /// <summary>
+        /// 车间
+        /// </summary>
+        public List<WorkShopModel> WorkShopList
+        {
+            get { return _WorkShopList; }
+            set { _WorkShopList = value; }
+        }
+
+        #endregion
+
     }
 }
