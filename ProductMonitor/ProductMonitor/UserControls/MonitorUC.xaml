@@ -400,7 +400,7 @@
                             <!--第一行-->
                             <TextBlock Text="{Binding WorkShopName}" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#18aabd" Margin="10,0" ></TextBlock>
                             <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10,0" > 
-                                <Hyperlink Foreground="White" TextDecorations="None">[详情]</Hyperlink>
+                                <Hyperlink Foreground="White" TextDecorations="None" Command="{Binding ShowDetailCmm,RelativeSource={RelativeSource AncestorType=Window}}">[详情]</Hyperlink>
                             </TextBlock>
                             <!--第二行-->
                             <StackPanel Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center">

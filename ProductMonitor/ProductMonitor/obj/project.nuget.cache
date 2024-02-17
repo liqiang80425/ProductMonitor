@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VhDCRsPHDRvSGVoNi3QCVFzHt+Atn4MeJ9IV+/ReS1tTkMnOwnOvjjZMvrC8Xmm01/gRzes7qtZ2KurUHB0FVw==",
+  "dgSpecHash": "Y9H76lbHPzeU9b1swEsjjNXA3PHYG1QS40Qj14c2GvbnrRNoFRy2f+QQFxRridH8vlORijBjTNRDugx/pwAiTg==",
   "success": true,
-  "projectFilePath": "E:\\自行课程资源\\WPF深入\\ProductMonitor_P20\\ProductMonitor\\ProductMonitor.csproj",
+  "projectFilePath": "E:\\自行课程资源\\WPF深入\\ProductMonitor\\ProductMonitor\\ProductMonitor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LiQiang\\.nuget\\packages\\livecharts\\0.9.7\\livecharts.0.9.7.nupkg.sha512",
     "C:\\Users\\LiQiang\\.nuget\\packages\\livecharts.wpf\\0.9.7\\livecharts.wpf.0.9.7.nupkg.sha512"

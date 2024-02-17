@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="ProductMonitor.UserControls.WorkShopDetailUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProductMonitor.UserControls"
+             mc:Ignorable="d" 
+              Height="675" Width="1200">
+    <UserControl.Resources>
+        <Style TargetType="RadioButton">
+            <Setter Property="Height" Value="22"></Setter>
+            <Setter Property="Width" Value="50"></Setter>
+            <Setter Property="Background" Value="#ddd"></Setter>
+            <Setter Property="Foreground" Value="#888"></Setter>
+            <Setter Property="FontSize" Value="11"></Setter>
+            <Setter Property="BorderBrush" Value="#33ffffff"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsChecked" Value="True">
+                    <Setter Property="Background" Value="Orange"></Setter>
+                    <Setter Property="Foreground" Value="White"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--给两行加背景颜色-->
+        <Border Background="#1118aabd" Margin="10,5"></Border>
+        <Border Background="#1118aabd" Margin="10,5" Grid.Row="1"></Border>
+        <!--第一行-->
+        <Button Content="返回" Style="{StaticResource BtnStyle}" Tag="&#xe632;" Height="28" Width="80" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0" Command="{Binding GoBackCmm,RelativeSource={RelativeSource AncestorType=Window}}"></Button>
+        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0">
+            <TextBlock Text="机台状态" Foreground="White" VerticalAlignment="Center"></TextBlock>
+            <RadioButton Content="全部"  IsChecked="True"></RadioButton>
+            <RadioButton Content="作业"></RadioButton>
+            <RadioButton Content="等待"></RadioButton>
+            <RadioButton Content="故障"></RadioButton>
+            <RadioButton Content="停机"></RadioButton>
+           
+        </StackPanel>
+    </Grid>
+</UserControl>

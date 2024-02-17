@@ -197,3 +197,5 @@ E:\自行课程资源\WPF深入\ProductMonitor_P20\ProductMonitor\obj\Debug\net6
 E:\自行课程资源\WPF深入\ProductMonitor_P20\ProductMonitor\obj\Debug\net6.0-windows\ProductMonitor.pdb
 E:\自行课程资源\WPF深入\ProductMonitor_P20\ProductMonitor\obj\Debug\net6.0-windows\ProductMonitor.genruntimeconfig.cache
 E:\自行课程资源\WPF深入\ProductMonitor_P20\ProductMonitor\obj\Debug\net6.0-windows\ref\ProductMonitor.dll
+E:\自行课程资源\WPF深入\ProductMonitor\ProductMonitor\obj\Debug\net6.0-windows\UserControls\WorkShopDetailUC.g.cs
+E:\自行课程资源\WPF深入\ProductMonitor\ProductMonitor\obj\Debug\net6.0-windows\UserControls\WorkShopDetailUC.baml
