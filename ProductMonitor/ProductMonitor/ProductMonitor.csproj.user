@@ -13,6 +13,9 @@
     <Compile Update="UserControls\RaderUC.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControls\RingUC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControls\WorkShopDetailUC.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -31,6 +34,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControls\RaderUC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\RingUC.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControls\WorkShopDetailUC.xaml">

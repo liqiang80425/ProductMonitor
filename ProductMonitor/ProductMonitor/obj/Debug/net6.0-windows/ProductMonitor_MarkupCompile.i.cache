@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 E:\自行课程资源\WPF深入\ProductMonitor\ProductMonitor\App.xaml
-6195312306
+772878422
 
-16-1340984651
+181657236805
 1961671473784
-Dictionary\BtnStyleDic.xaml;Dictionary\OperateBtnStyleDic.xaml;MainWindow.xaml;UserControls\MonitorUC.xaml;UserControls\RaderUC.xaml;UserControls\WorkShopDetailUC.xaml;
+Dictionary\BtnStyleDic.xaml;Dictionary\OperateBtnStyleDic.xaml;MainWindow.xaml;UserControls\MonitorUC.xaml;UserControls\RaderUC.xaml;UserControls\RingUC.xaml;UserControls\WorkShopDetailUC.xaml;
 
-False
+True
 

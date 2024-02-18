@@ -82,6 +82,24 @@ namespace ProductMonitor.ViewModels
             WorkShopList.Add(new WorkShopModel { WorkShopName = "贴片车间", WorkingCount = 68, WaitCount = 8, WrongCount = 4, StopCount = 0 });
 
             #endregion
+
+            #region 初始化机台列表
+            MachineList = new List<MachineModel>();
+            Random random = new Random();
+            for (int i = 0; i < 20; i++)
+            {
+                int plan = random.Next(100, 1000);//计划量 随机数
+                int finished = random.Next(0, plan);//已完成量
+                MachineList.Add(new MachineModel
+                {
+                    MachineName = "焊接机-" + (i + 1),
+                    FinishedCount = finished,
+                    PlanCount = plan,
+                    Status = "作业中",
+                    OrderNo = "H202212345678"
+                });
+            }
+            #endregion
         }
 
         /// <summary>
@@ -352,6 +370,32 @@ namespace ProductMonitor.ViewModels
         }
 
         #endregion
+
+        #region 机台集合属性
+
+        /// <summary>
+        /// 机台集合属性
+        /// </summary>
+        private List<MachineModel> _MachineList;
+
+        /// <summary>
+        /// 机台集合属性
+        /// </summary>
+        public List<MachineModel> MachineList
+        {
+            get { return _MachineList; }
+            set
+            {
+                _MachineList = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("MachineList"));
+                }
+            }
+        }
+        #endregion
+
+
 
     }
 }
