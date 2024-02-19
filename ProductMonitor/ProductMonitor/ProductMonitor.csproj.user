@@ -19,6 +19,12 @@
     <Compile Update="UserControls\WorkShopDetailUC.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\SettingsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SettingsWin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Dictionary\BtnStyleDic.xaml">
@@ -40,6 +46,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControls\WorkShopDetailUC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SettingsPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SettingsWin.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
