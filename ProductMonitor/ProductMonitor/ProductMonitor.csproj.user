@@ -19,6 +19,9 @@
     <Compile Update="UserControls\WorkShopDetailUC.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ModbusTest.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\SettingsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -46,6 +49,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControls\WorkShopDetailUC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ModbusTest.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\SettingsPage.xaml">

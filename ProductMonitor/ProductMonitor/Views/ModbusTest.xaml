@@ -1,0 +1,17 @@
+﻿<Window x:Class="ProductMonitor.Views.ModbusTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProductMonitor.Views"
+        mc:Ignorable="d"
+        Title="ModbusTest" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <Button Content="读线圈状态" Click="BtnReadCoilsStatus"  Width="100" Margin="0,5"></Button>
+            <Button Content="读保持寄存器" Click="BtnReadHoldRegiter"  Width="100" Margin="0,5"></Button>
+            <Button Content="写保持寄存器(单个值)" Click="BtnWriteHoldRegiter"  Width="150" Margin="0,5"></Button>
+            <Button Content="写保持寄存器(多个值)" Click="BtnWriteHoldRegiterMul"  Width="150" Margin="0,5"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

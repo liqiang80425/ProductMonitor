@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,30 @@ namespace ProductMonitor.ViewModels
             EnviromentList.Add(new EnviromentModel { EnItemName = "PM2.5(m³)", EnItemValue = 20 });
             EnviromentList.Add(new EnviromentModel { EnItemName = "硫化氢(PPM)", EnItemValue = 15 });
             EnviromentList.Add(new EnviromentModel { EnItemName = "氮气(PPM)", EnItemValue = 18 });
+
+            //从设备读取数据(异步) 如果您没有学习到上位机，该区域代码报错，直接注释该区域代码
+            #region 从设备读取环境数据
+            Task.Run(() =>
+                      {
+                          while (true)
+                          {
+                              using (SerialPort serialPort = new SerialPort("COM1", 9600, Parity.None, 8, StopBits.One))
+                              {
+                                  serialPort.Open();
+                                  Modbus.Device.IModbusSerialMaster master = Modbus.Device.ModbusSerialMaster.CreateRtu(serialPort);
+
+                                  //功能码03
+                                  ushort[] value = master.ReadHoldingRegisters(1, 0, 7);//从设备地址，寄存器起始地址，寄存器个数
+
+                                  for (int i = 0; i < 7; i++)
+                                  {
+                                      EnviromentList[i].EnItemValue = value[i];
+                                  }
+                              }
+                          }
+                      });
+            #endregion
+
             #endregion
 
             #region 初始化报警列表

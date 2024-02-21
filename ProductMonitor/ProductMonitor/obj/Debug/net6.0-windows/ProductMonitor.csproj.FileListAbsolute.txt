@@ -279,3 +279,14 @@ E:\自行课程资源\WPF深入\ProductMonitor_P28\ProductMonitor\obj\Debug\net6
 E:\自行课程资源\WPF深入\ProductMonitor_P28\ProductMonitor\obj\Debug\net6.0-windows\ref\ProductMonitor.dll
 E:\自行课程资源\WPF深入\ProductMonitor\ProductMonitor\obj\Debug\net6.0-windows\Views\SettingsPage.g.cs
 E:\自行课程资源\WPF深入\ProductMonitor\ProductMonitor\obj\Debug\net6.0-windows\Views\SettingsPage.baml
+E:\自行课程资源\WPF深入\ProductMonitor\ProductMonitor\bin\Debug\net6.0-windows\NModbus4.dll
+E:\自行课程资源\WPF深入\ProductMonitor\ProductMonitor\bin\Debug\net6.0-windows\System.IO.Ports.dll
+E:\自行课程资源\WPF深入\ProductMonitor\ProductMonitor\bin\Debug\net6.0-windows\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+E:\自行课程资源\WPF深入\ProductMonitor\ProductMonitor\bin\Debug\net6.0-windows\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+E:\自行课程资源\WPF深入\ProductMonitor\ProductMonitor\bin\Debug\net6.0-windows\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+E:\自行课程资源\WPF深入\ProductMonitor\ProductMonitor\bin\Debug\net6.0-windows\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+E:\自行课程资源\WPF深入\ProductMonitor\ProductMonitor\bin\Debug\net6.0-windows\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+E:\自行课程资源\WPF深入\ProductMonitor\ProductMonitor\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\System.IO.Ports.dll
+E:\自行课程资源\WPF深入\ProductMonitor\ProductMonitor\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.IO.Ports.dll
+E:\自行课程资源\WPF深入\ProductMonitor\ProductMonitor\obj\Debug\net6.0-windows\Views\ModbusTest.g.cs
+E:\自行课程资源\WPF深入\ProductMonitor\ProductMonitor\obj\Debug\net6.0-windows\Views\ModbusTest.baml
